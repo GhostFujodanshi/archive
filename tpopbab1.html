@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BAB 1 - Ghost Fujodanshi</title>
+    <style>
+        /* 1. CSS DASAR (Tampilan Terang / Default) */
+        body {
+            background-color: #f3e6f9;
+            color: #4a1c40;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.4s, color 0.4s; /* Memberikan efek perubahan warna yang halus/mengalun */
+        }
+
+        .wadah-baca {
+            background-color: white;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.2);
+            line-height: 1.8;
+            font-size: 18px;
+            transition: background-color 0.4s;
+        }
+
+        h1 {
+            text-align: center;
+            color: #9b59b6;
+            border-bottom: 2px dashed #e6cff2;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tombol-kembali {
+            display: inline-block;
+            color: #9b59b6;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .tombol-kembali:hover {
+            color: #8e44ad;
+            text-decoration: underline;
+        }
+
+        /* 2. DESAIN TOMBOL SAKELAR */
+        .tombol-mode {
+            background-color: #4a1c40;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            float: right; /* Menggeser posisi tombol ke kanan atas */
+            transition: 0.3s;
+        }
+
+        .tombol-mode:hover {
+            background-color: #2c1026;
+            transform: scale(1.05); /* Efek membesar sedikit saat disentuh mouse */
+        }
+
+        /* 3. TAMPILAN SAAT MODE GELAP AKTIF */
+        .mode-gelap {
+            background-color: #121212; /* Warna latar sangat gelap */
+            color: #e0e0e0;
+        }
+
+        .mode-gelap .wadah-baca {
+            background-color: #242424; /* Kotak baca menjadi abu-abu gelap */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: #e0e0e0; /* Warna teks tulisan menjadi putih pucat */
+        }
+
+        .mode-gelap h1 {
+            color: #d7a1eb; /* Warna ungu dibuat lebih menyala agar terbaca */
+            border-bottom: 2px dashed #5a3a69;
+        }
+
+        .mode-gelap .tombol-kembali {
+            color: #d7a1eb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wadah-baca">
+        
+        <!-- Ini adalah Tombol Sakelarnya -->
+        <button onclick="ubahMode()" id="tombol-mode" class="tombol-mode">Mode Gelap 🌙</button>
+
+        <!-- Tombol Panah Kembali -->
+        <a href="index.html" class="tombol-kembali">← Kembali ke Beranda</a>
+        
+        <h1>BAB 1</h1>
+        
+        <!-- Teks Cerita -->
+        <p>Angin berembus lembut menyapu dedaunan musim gugur. Di sudut jalan itu, Spicamey berdiri sambil menatap jam tangannya dengan cemas. Ini sudah lewat lima belas menit dari waktu yang dijanjikan.</p>
+        
+        <p>"Kenapa dia belum datang juga?" gumam Spicamey pelan, menghela napas panjang hingga embun terbentuk di udara yang dingin.</p>
+        
+        <p>Tidak lama kemudian, suara langkah kaki terdengar mendekat dari arah gang gelap di seberang jalan, memecah kesunyian malam tersebut...</p>
+        
+    </div>
+
+    <!-- 4. JAVASCRIPT: LOGIKA UNTUK MENGHIDUPKAN TOMBOL -->
+    <script>
+        function ubahMode() {
+            var body = document.body;
+            // Perintah untuk mematikan/menyalakan kelas 'mode-gelap'
+            body.classList.toggle("mode-gelap");
+            
+            var tombol = document.getElementById("tombol-mode");
+            // Mengubah tulisan di tombol sesuai dengan mode yang sedang menyala
+            if (body.classList.contains("mode-gelap")) {
+                tombol.innerHTML = "Mode Terang ☀️";
+            } else {
+                tombol.innerHTML = "Mode Gelap 🌙";
+            }
+        }
+    </script>
+
+</body>
+</html>

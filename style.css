@@ -1,0 +1,50 @@
+/* Mengatur tampilan dasar seluruh halaman */
+body {
+    background-color: #f3e6f9; /* Ini adalah kode warna ungu pastel lembu */
+    color: #4a1c40; /* Warna teks ungu sangat gelap agar nyaman dibaca */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mengubah gaya huruf */
+    margin: 50px;
+    text-align: center; /* Membuat semua teks berada di tengah */
+}
+
+/* Mengatur khusus untuk judul utama */
+h1 {
+    color: #9b59b6; /* Warna ungu yang lebih terang untuk judul */
+}
+
+/* Mengatur paragraf */
+p {
+    font-size: 18px; /* Membesarkan ukuran teks sedikit */
+
+/* Mengatur tampilan kotak novel */
+.kotak-novel {
+    background-color: white;
+    border-radius: 12px; /* Membuat sudut kotak membulat */
+    padding: 20px;
+    margin: 30px auto; /* Membuat kotak berada di tengah halaman */
+    max-width: 450px; /* Lebar maksimal kotak */
+    box-shadow: 0 4px 10px rgba(155, 89, 182, 0.2); /* Efek bayangan berwarna ungu tipis */
+}
+
+/* Mengatur ukuran judul di dalam kotak */
+.kotak-novel h2 {
+    color: #4a1c40;
+    margin-top: 0;
+}
+
+/* Mengatur tampilan tombol baca */
+.tombol-baca {
+    display: inline-block;
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    border-radius: 8px; /* Sudut tombol membulat */
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Membuat tombol berubah warna saat disentuh mouse (efek hover) */
+.tombol-baca:hover {
+    background-color: #8e44ad; 
+}
