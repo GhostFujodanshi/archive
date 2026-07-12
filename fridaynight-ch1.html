@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baca Komik - Ghost Fujodanshi</title>
+    <style>
+        body { background-color: #1a1a1a; margin: 0; padding: 0; } /* Background gelap supaya nyaman lihat gambar */
+        
+        .komik-viewer {
+            max-width: 800px; /* Lebar maksimal halaman */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Mengatur agar gambar pas di layar HP */
+        .komik-viewer img {
+            width: 100%; 
+            display: block; /* Menghilangkan celah putih antar gambar */
+        }
+
+        /* Container Navigasi */
+.nav-chapter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px;
+}
+
+/* Gaya Tombol */
+.btn-nav {
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Efek saat tombol tidak aktif (misal Chapter 1 tidak punya Prev) */
+.btn-disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-nav:hover { background-color: #4a1c40; }
+
+/* Gaya untuk kotak dukungan */
+.dukungan {
+    background-color: white;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.tombol-donasi {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Jarak antar tombol */
+    margin-top: 20px;
+}
+
+/* Tombol Trakteer (Warna Merah Khas) */
+.btn-trakteer {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Tombol Ko-fi (Warna Biru Khas) */
+.btn-kofi {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Efek saat mouse diarahkan ke tombol */
+.btn-trakteer:hover, .btn-kofi:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi Chapter -->
+<div class="nav-chapter">
+    <!-- Tombol Sebelumnya -->
+    <a href="#" class="btn-nav btn-disabled">« Sebelumnya</a>
+
+    <!-- Tombol ke Daftar Isi -->
+    <a href="komik.html" class="btn-nav">Daftar Isi</a>
+
+    <!-- Tombol Selanjutnya -->
+    <a href="#" class="btn-nav btn-disabled">Selanjutnya »</a>
+</div>
+    <div class="komik-viewer">
+        <!-- Panggil gambar dari folder images/komik1/chapter1 -->
+        <img src="images/fridaynight/chapter1/01.png" alt="Halaman 1">
+        <img src="images/fridaynight/chapter1/02.png" alt="Halaman 2">
+        <img src="images/fridaynight/chapter1/03.png" alt="Halaman 3">
+        <img src="images/fridaynight/chapter1/04.png" alt="Halaman 4">
+        <img src="images/fridaynight/chapter1/05.png" alt="Halaman 5">
+        <img src="images/fridaynight/chapter1/06.png" alt="Halaman 6">
+        <img src="images/fridaynight/chapter1/07.png" alt="Halaman 7">
+        <img src="images/fridaynight/chapter1/08.png" alt="Halaman 8">
+        <img src="images/fridaynight/chapter1/09.png" alt="Halaman 9">
+        <img src="images/fridaynight/chapter1/10.png" alt="Halaman 10">
+        <img src="images/fridaynight/chapter1/11.png" alt="Halaman 11">
+        <img src="images/fridaynight/chapter1/12.png" alt="Halaman 12">
+        <img src="images/fridaynight/chapter1/13.png" alt="Halaman 13">
+        <img src="images/fridaynight/chapter1/14.png" alt="Halaman 14">
+        <img src="images/fridaynight/chapter1/15.png" alt="Halaman 15">
+        <img src="images/fridaynight/chapter1/16.png" alt="Halaman 16">
+        <img src="images/fridaynight/chapter1/17.png" alt="Halaman 17">
+        <img src="images/fridaynight/chapter1/18.png" alt="Halaman 18">
+        <!-- Tambahkan terus sesuai jumlah halamanmu -->
+    </div>
+
+<!-- Navigasi Chapter -->
+<div class="nav-chapter">
+    <!-- Tombol Sebelumnya -->
+    <a href="#" class="btn-nav btn-disabled">« Sebelumnya</a>
+
+    <!-- Tombol ke Daftar Isi -->
+    <a href="komik.html" class="btn-nav">Daftar Isi</a>
+
+    <!-- Tombol Selanjutnya -->
+    <a href="#" class="btn-nav btn-disabled">Selanjutnya »</a>
+</div>
+
+<!-- Bagian Dukungan -->
+<div class="dukungan">
+    <h3>Dukung Ghost Fujodanshi ✨</h3>
+    <p>Jika kamu menikmati terjemahanku, pertimbangkan untuk memberi dukungan agar aku tetap semangat!</p>
+    
+    <div class="tombol-donasi">
+        <!-- Ganti tanda # dengan link asli Trakteer/Ko-fi kamu -->
+        <a href="https://trakteer.id/ghostfujodanshi" target="_blank" class="btn-trakteer">Traktir di Trakteer</a>
+        <a href="https://ko-fi.com/ghostfujodanshi" target="_blank" class="btn-kofi">Support di Ko-fi</a>
+    </div>
+</div>
+
+</body>
+</html>

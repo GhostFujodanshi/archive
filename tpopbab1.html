@@ -84,6 +84,81 @@
         .mode-gelap .tombol-kembali {
             color: #d7a1eb;
         }
+
+        /* Gaya untuk kotak dukungan */
+.dukungan {
+    background-color: white;
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.tombol-donasi {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Jarak antar tombol */
+    margin-top: 20px;
+}
+
+/* Tombol Trakteer (Warna Merah Khas) */
+.btn-trakteer {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Tombol Ko-fi (Warna Biru Khas) */
+.btn-kofi {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Efek saat mouse diarahkan ke tombol */
+.btn-trakteer:hover, .btn-kofi:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Container Navigasi */
+.nav-chapter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px;
+}
+
+/* Gaya Tombol */
+.btn-nav {
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Efek saat tombol tidak aktif (misal Chapter 1 tidak punya Prev) */
+.btn-disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-nav:hover { background-color: #4a1c40; }
     </style>
 </head>
 <body>
@@ -96,15 +171,280 @@
         <!-- Tombol Panah Kembali -->
         <a href="index.html" class="tombol-kembali">← Kembali ke Beranda</a>
         
+<!-- Navigasi Chapter -->
+<div class="nav-chapter">
+    <!-- Tombol Sebelumnya -->
+    <a href="#" class="btn-nav btn-disabled">« Sebelumnya</a>
+
+    <!-- Tombol ke Daftar Isi -->
+    <a href="index.html" class="btn-nav">Daftar Isi</a>
+
+    <!-- Tombol Selanjutnya -->
+    <a href="#" class="btn-nav btn-disabled">Selanjutnya »</a>
+</div>
+
         <h1>BAB 1</h1>
         
         <!-- Teks Cerita -->
-        <p>Angin berembus lembut menyapu dedaunan musim gugur. Di sudut jalan itu, Spicamey berdiri sambil menatap jam tangannya dengan cemas. Ini sudah lewat lima belas menit dari waktu yang dijanjikan.</p>
+        <p>Malapetaka itu seperti ular. Ia merayap dalam senyap, lalu menggigit pergelangan kaki mereka yang lengah.</p>
         
-        <p>"Kenapa dia belum datang juga?" gumam Spicamey pelan, menghela napas panjang hingga embun terbentuk di udara yang dingin.</p>
+        <p>Itulah kesimpulan yang kudapat setelah tak terhitung kalinya aku merenungi rentetan kesialan yang terjadi pada masa itu.</p>
         
-        <p>Tidak lama kemudian, suara langkah kaki terdengar mendekat dari arah gang gelap di seberang jalan, memecah kesunyian malam tersebut...</p>
+        <p>Seiring aku beranjak dewasa, aku sering bertanya-tanya, apakah sebenarnya ada pertanda terselubung mengenai malapetaka yang akan datang, pertanda yang terlewatkan oleh diriku yang masih belia. Layaknya gelas yang tiba-tiba pecah atau hujan deras di tengah langit yang cerah; jenis-jenis firasat klise yang kerap muncul di drama maupun film.</p>
+
+        <p>Namun, sekeras apa pun aku mengingat dan mereka-reka, semesta tidak pernah memberiku isyarat semacam itu. Malam itu, malapetaka yang kelak menimpa Ayah dan aku setengah hari kemudian pasti telah menyusup ke dalam rumah kami bak seekor ular, bersembunyi dalam bungkam di suatu tempat di dekat kakiku yang terlelap.</p>
         
+        <p>Mengendap-endap tanpa suara, namun begitu kilat. Mengincar pergelangan kakiku yang tak tertindungi.</p>
+
+        <p>Di usiaku yang baru menginjak tiga belas tahun, masih duduk di bangku sekolah dasar, aku tertidur di sofa saat menonton TV, menunggu Ayah yang pulang larut karena bekerja. Kala itu pertengahan bulan Juli. Udara lembap yang berembus masuk lewat jendela yang terbuka membelai dahiku, yang mulai dihiasi rintik peluh akibat malam tropis yang gerah. Dalam keadaan setengah sadar, aku meringkuk dengan nyaman, menghirup aroma sisa-sisa musim penghujan yang terbawa angin.</p>
+        
+        <p>Setiap kali aku mengenang malam itu, aku teringat sensasi dingin dari kulit sofa yang menyentuh pipiku tiap kali aku menggeliat, suara pembawa acara dari televisi, dan tirai putih yang berkibar pelan. Itu adalah ingatan terakhirku tentang sebuah tidur yang damai.</p>
+
+        <p>Lewat tengah malam, bunyi <i>bip, bip</i> dari tombol angka di pintu depan membuatku perlahan membuka kelopak mata yang terasa berat. Aku melihat Ayah sedang melepas sepatunya di pintu masuk, tapi aku terlalu mengantuk untuk segera bangun. Suara parau lolos dari bibirku.</p>
+
+        <p>"Ayah sudah pulang?"</p>
+
+        <p>"Lee Chaeha, ini sudah jam dua belas dan kamu masih bangun? Besok kamu harus sekolah. Seharusnya kau sudah tidur."</p>
+
+        <p>"Aku tadi tidur di sofa."</p>
+
+        <p>"Kau harus tidur di kasur dan meluruskan kakimu supaya bisa beristirahat dengan benar. Begitulah caranya agar kau bisa bermimpi indah."</p>
+
+        <p>Ayah melangkah menghampiri dan memelukku erat. Ia mengenakan kemeja lengan panjang dan sebuah jas. Pasti rasanya luar biasa gerah mengenakan pakaian seperti itu di tengah musim panas.</p>
+
+        <p>Dulu ketika masih menjadi sopir taksi, ia biasa memakai kemeja lengan pendek yang nyaman. Namun, semenjak menjadi sopir pribadi untuk pemilik kasino, Ayah berpakaian necis layaknya pekerja kantoran. Kasino itu adalah bisnis yang benar-benar baru dan belum beroperasi, tetapi sudah ada seorang presiden direktur yang sedang memepersiapkan pembukaan besarnya, dan ayahku adalah sopir pria itu.</p>
+
+        <p>Gaji Ayah meningkat seiring dengan pakaiannya yang semakin bagus. Setahun setelah ia menjadi sopir pemilik kasino itu, kami pindah dari apartemen kecil kami yang menghadap utara, tempat di mana jemuran tidak pernah kering dengan benar, ke sebuah apartemen tua. Tempat itu terlalu besar untuk keluarga yang hanya terdiri dari dua orang, hanya aku dan Ayah, setelah Ibu meninggal karena kanker.</p>
+
+        <p>Sambil mengucek mata yang masih mengantuk, aku bertanya, "Apakah Tuan Kang pulang larut lagi hari ini? Biasanya Ayah sudah di rumah jam delapan, tapi akhir-akhir ini selalu tengah malam."</p>
+
+        <p>"Maaf, maaf. Pembukaan kasino tinggal menghitung hari, jadi Tuan Kang sangat sibuk. Setelah kasinonya beroperasi, gaji Ayah akan naik lebih tinggi lagi."</p>
+
+        <p>"Benarkan?"</p>
+
+        <p>"Tentu saja. Tunggu saja sampai kasinonya buka. Orang-orang yang kesusahan di kota tambang ini akan punya pekerjaan, dan Kota Danhyeon akan menjadi tempat yang layak huni. Seperti Kota Buyong di Provinsi Gangwon."</p>
+
+        <p>Nada bicara Ayah menyiratkan setitik kebanggaan karena telah menjadi sopir dari orang yang penting. Hal itu bisa dimaklumi, mengingat keberhasilan menarik kasino domestik kedua ini merupakan impian yang telah lama didambakan oleh Kota Danhyeon.</p>
+
+        <p> Orang-orang sering kali tidak menyadari bahwa kota-kota tambang juga eksis di luar Provinsi Gangwon. Tersebar di penjuru Provinsi Gyeonggi, Chungcheong, Gyeongsang, Jeolla, dan berbagai daerah lainnya, skala kota-kota tersebut jauh lebih kecil daripada yang ada di Provinsi Gangwon, sehingga sering luput dari perhatian.</p>
+
+        <p>Setelah era keemasan kota tambang berakhir, para penambang di luar Provinsi Gangwon pun kehilangan lahan dan rumah tempat mereka memeras keringat sekian lama. Mereka mencari cara untuk bertahan hidup, namun tak kuasa menemukan jalan keluar maupun melepaskan diri dari jerat kemiskinan.</p>
+
+        <p>Banyak penambang berbondong-bondong mendatangi kota tambang Danhyeon yang mulai terbengkalai di Provinsi Gyeonggi, yang berbatasan dengan tambang batu bara Chungcheong dan Gyeongbuk. Akan tetapi, bahkan setelah mengumpulkan seluruh sumber daya dan mengerahkan segala cara, menyambung hidup tetaplah sebuah perjuangan yang teramat berat. Kota Danhyeon, meskipun secara administratif termasuk dalam wilayah Provinsi Gyeonggi, merupakan daerah pinggiran terpencil dari kawasan metropolitan tanpa satu pun jalur kereta bawah tanah. Selain memuat pabrik-pabrik usang yang enggan ditampung oleh wilayah lain, Danhyeon hanyalah kota kecil dengan segelintir peluang.</p>
+
+        <p>Meski begitu, para penambang dan keluarga mereka tidak menyerah. Mengikuti jejak Asosiasi Tambang Batu Bara Provinsi Gangwon yang telah sukses menarik minat kasino domestik, mereka membentuk perkumpulan sendiri. Mereka menamainya "Asosiasi Tambang Batu Bara Wilayah Lain", dan menuntut agar pemerintah memberikan mereka jalan keluar. Itu adalah sebuah perjuangan yang panjang dan berliku.</p>
+
+        <p>Harapan mereka yang membara akhirnya menemukan titik terang, mencuat dari balik tambang-tambang yang terbengkalai. Mereka berhasil membawa kasino domestik kedua ke Kota Danhyeon. Tepat lima tahun setelah Kasino Buyong beroperasi di Provinsi Gangwon.</p>
+
+        <p>Presiden direktur pertama yang memimpin persiapan pembukaan kasino itu adalah teman SMA Ayah, Tuan Kang. Pria itu kebetulan menaiki taksi Ayah tak lama setelah ia menerima jabatan tersebut, dan langsung mengenali kawan lamanya.</p>
+
+        <p>Ayah adalah orang yang kelewat jujur, naif, dan terlalu banyak bicara untuk pria seusianya. Ia mungkin telah menumpahkan seluruh kepahitan hidupnya kepada sahabatnya itu, bahkan hingga menitikkan air mata.</p>
+
+        <p>Tentang bagaimana ia kehilangan istri tercintanya akibat kanker dan perlahan tenggelam dalam lilitan utang demi melunasi biaya pengobatan. Serta tentang putra kecilnya yang harus kehilangan sang ibu di usia yang begitu belia.</p>
+
+        <p>Keduanya saling berbagi kenangan, dan presdir yang baik hati itu tanpa ragu menawari kawan lamanya pekerjaan sebagai sopir pribadi di kasino.</p>
+
+        <p>Semenjak saat itu, Ayah mulai memanggil sahabatnya itu dengan sebutan "Tuan", tetapi wajahnya selalu memancarkan kebahagiaan. Jika temanku menawariku uang dengan syarat aku harus menggunakan bahasa formal kepadanya, kurasa aku akan merasa amat tersinggung.</p>
+
+        <p>Apakah pemikiran seperti itu akan berubah ketika kita beranjak dewasa? Ayah tampak benar-benar bahagia. Ia bilang, ia merasa sangat lega karena pada akhirnya bisa mendaftarkanku ke tempat bimbingan belajar bahasa Inggris dan matematika.</p>
+
+        <p>Namun, aku lebih suka saat Ayah, alih-alih mengirimku ke tempat les, mengajariku cara memecahkan masalah sendiri dan selalu pulang ke rumah untuk makan malam di sela-sela jadwal mengemudi taksinya. Meskipun meja makan kami yang kecil hanya berisi kimchi dan ikan teri kering sebagai lauk.</p>
+
+        <p>"Aku tidak masalah meski Ayah tidak berpenghasilan banyak. Aku lebih suka Ayah sering berada di rumah."</p>
+
+        <p>"Oh, putraku yang manis. Anak-anak biasanya mulai menjauhi ayah mereka saat menginjak usia sepuluh tahun, tapi masa puber Chaeha pasti masih jauh."</p>
+
+        <p>"Hanya saja... rasanya membosankan sendirian di malam hari."</p>
+
+        <p>Aku merasa harus menjawab layaknya anak yang sedang "puber", jadi aku mencoba terdengar sedatar mungkin.</p>
+
+        <p>"Tetap saja, Ayah harus mencari banyak uang untuk membelikanmu pakaian yang bagus dan mengirimmu ke tempat les, Chaeha. Jika tidak, Ayah tidak akan sanggup menemui ibumu di surga nanti."</p>
+
+        <p>"Kenapa Ayah bicara soal Ibu? Hentikan. Itu membuatku ingin menangis."</p>
+
+        <p>"Kau masih menangis? Kalau begitu, menangislah sepuasmu. Kau harus menangis sampai kau tidak lagi merasa sedih saat kita bicara soal Ibu, supaya kelak kita bisa membicarakannya sesuka hati."</p>
+
+        <p>"Lupakan saja. Hentikan."</p>
+
+        <p>Ayah sedang melankolis. Aku tidak ingin memperlihatkan air mataku, jadi aku menjawab dengan sedikit ketus. Kali ini, kurasa aku benar-benar terdengar seperti remaja. Aku segera mengalihkan pembicaraan.</p>
+
+        <p>"Jadi, apakah Ayah menghasilkan banyak uang?"</p>
+
+        <p>"Ya. Setelah jam 11 malam, Tuan Kang memberiku bonus satu juta won. Lihat ini."</p>
+
+        <p>Ayah mengeluarkan dompetnya yang tebal dan tanpa ragu menyodorkan uang lima puluh ribu won padaku. Itu jumlah yang sangat besar hingga aku sempat menarik tanganku, tetapi ekspresi Ayah saat memberikan uang saku pada putranya tampak begitu bahagia hingga akhirnya aku menerimanya. Selembar uang yang terlipat itu mendarat di telapak tanganku.</p>
+
+        <p>"Terima kasih. Tapi kenapa Ayah memanggilnya 'Tuan Kang' bahkan setelah jam kerja selesai? Bukankah Ayah bilang dia teman Ayah?"</p>
+
+        <p>"Apa masalahnya? Dia memang teman, tapi Ayah menghormatinya, jadi Ayah boleh saja memanggil Wooseong dengan sebutan 'Tuan Kang'."</p>
+
+        <p>"Namanya Wooseong?"</p>
+
+        <p>"Ya, Kang Wooseong."</p>
+
+        <p>"Wooseong... nama yang bagus."</p>
+
+        <p>Kang Wooseong. Terdengar seperti nama seorang aktor</p>
+
+        <p>Ayah menambahkan satu peringatan terakhir.</p>
+
+        <p>"Hei, Lee Chaeha. Meskipun Ayah memanggilnya Wooseong, kau harus memanggilnya 'Tuan'. Sudahlah, masuk dan tidurlah. Ayah akan menonton TV di sofa lalu tidur."</p>
+
+        <p>"Kau bilang tidur di sofa itu tidak baik.... Baiklah. Selamat malam."</p>
+
+        <p>Aku bangkit dan memeluk Ayah pelan. Ia beraroma angin musim panas yang pekat. Dan sedikit aroma keringat. Menilai dari kedatangannya yang larut, pastilah ia melalui waktu yang sulit dan melelahkan saat mengantar temannya yang mabuk ke apartemen mewahnya.</p>
+
+        <p>Mencium aroma keringatnya, aku menggenggam erat lembaran uang di tanganku sebelum melepaskannya.</p>
+
+        <p>Aku pergi ke kamarku dan tertidur begitu aku berbaring. Tentu saja, seolah mengantisipasi takdir yang akan datang, aku tidak bisa tidur senyenyak saat aku di sofa.</p>
+
+        <p>Aku disiksa oleh mimpi-mimpi aneh sepanjang malam. Ketika sebuah tangan besar akhirnya mengguncangku hingga terjaga, fajar terakhir yang tak terlupakan menyinari wajah Ayah dan kertas dinding tua di belakangnya. Andai saja aku tidak membuka mata hari itu.</p>
+
+        <p>Andai saja aku bisa menukar tidur semalam dengan keabadian, seperti yang dilakukan Ibu. Maka aku tidak perlu mengalami peristiwa yang akan mengguncang hidupku itu.</p>
+
+        <p>Wajah Ayah tampak samar di balik bulu mataku yang mengantuk. Janggutnya yang kasar menyentuh pipiku, dan ia menepukku, dengan kasih sayang yang tidak seperti biasanya, saat aku berusaha bangun hari itu.</p>
+
+        <p>Ia bahkan menciumku, sesuatu yang sudah lama tidak ia lakukan.</p>
+
+        <p>"Lee Chaeha, bangun. Waktunya sarapan."</p>
+
+        <p>"Jam berapa ini?"</p>
+
+        <p>Suaraku parau, seperti butiran pasir yang bergesekan.</p>
+
+        <p>"6.30."</p>
+
+        <p>Baru setelah mendengar jamnya, aku tersadar mengapa begitu sulit untuk bangun.</p>
+
+        <p>"Ayah, jam 7 pun terlalu pagi untuk sarapan. Aku satu-satunya orang di kelasku yang makan sepagi ini."</p>
+
+        <p>"Tuan Kang ada rapat pagi hari ini, jadi Ayah tidak punya pilihan. Lagipula, Ayah harus membuatkanmu sarapan. Ibumu akan melemparkan petir dari surga jika dia melihatmu menyiapkan sarapanmu sendiri lalu pergi sekolah."</p>
+
+        <p>"Ayah bicara soal Ibu lagi. Hentikan."</p>
+
+        <p>Sambil menggerutu, aku duduk dan mengayunkan kakiku keluar dari balik selimut. Aku mematikan kipas angin tua yang berderak itu, lalu meninggalkan kamar.</p>
+
+        <p>Kami sarapan bersama, dan aku mengantar Ayah berangkat kerja. Jaketnya memiliki kancing emas yang mulus tanpa pola. Ayah pasti mengira itu setelan yang berkelas, tetapi desainnya terlihat sangat kuno.</p>
+
+        <p>"Belilah pakaian yang layak untuk Ayah dengan bonus yang diberikan Tuan Kang kemarin."</p>
+
+        <p>"Benarkah? Menurut Ayah, ini terlihat bagus."</p>
+
+        <p>"Kancingnya norak. Terlalu mengkilap."</p>
+
+        <p>"Putra kita ini tidak punya selera <i>fashion</i> sama sekali. Dia tidak mengerti bahwa kancingnya adalah daya tariknya. Oh, setelan ini panas. Ayah harus segera masuk ke mobil dan menyalakan AC. Baiklah, Ayah berangkat kerja sekarang."</p>
+
+        <p>"Sampai jumpa nanti."</p>
+
+        <p>Aku ingin mengantarnya sampai ke pintu, jadi aku bangkit dari kursi makan. Jika menengok kembali, aku bersyukur melakukannya. Aku bisa melihat wajah Ayah satu kali lagi.</p>
+
+        <p>Aku mengucapkan salam perpisahan dengan santai saat Ayah memakai sepatunya.</p>
+
+        <p>"Semoga harimu lancar."</p>
+
+        <p>"Kau juga. Belajarlah yang giat hari ini."</p.>
+
+        <p>"Jangan khawatir."</p>
+
+        <p>Setelah mengantarnya pergi, aku mencuci piring dan bersiap-siap ke sekolah. Namun, karena bangun terlalu pagi, aku masih punya banyak sekali waktu tersisa. Aku menonton TV selama satu jam sebelum meninggalkan rumah, dan aku tetap menjadi orang pertama yang sampai di sekolah. Aku berganti sepatu sekolah dan mendongak dengan tatapan kosong. Lapangan sekolah yang kosong menarik perhatianku.</p>
+
+        <p>Bayangan besar yang menyelimutinya perlahan surut, menyingkap matahari bulan Juli yang bersinar layaknya kancing emas di setelan jas Ayah. Angin kering menyapu tanah yang gersang, menerbangkan debu.</p>
+
+        <p>Menyaksikan partikel halus yang melayang di udara, aku merasa kesepian, seolah-olah hanya aku satu-satunya yang tersisa di bumi yang bulat ini.</p>
+
+        <p>Peristiwa aneh itu terjadi kurang dari setengah hari kemudian.</p>
+
+        <p>Menjelang akhir jam pelajaran ketiga, seorang pengunjung tak terduga datang ke ruang kelas. Saat mengenali sosok asing itu, aku merasakan sentakan seolah kulit di sepanjang tulang punggungku menegang. Itu bibiku, yang belum pernah kutemui sejak Ibu meninggal. Kedatangan seorang kerabat di jam sekolah berarti ada sesuatu yang tidak beres di rumah.</p>
+
+        <p>Mata anak-anak beralih ke pintu depan saat melihat orang dewasa yang bukan seorang guru muncul. Wali kelasku, dengan wajah pucat, meninggalkan podium. Saat ia berbicara dengan bibiku, ekspresinya menjadi semakin gelap. Di satu titik, ia menutup mulutnya dengan kedua tangan, seolah diliputi ngeri.</p>
+
+        <p>Aku mencoba mengusir rasa takut familiar yang merayap di tulang punggungku, namun lintah hitam yang melekat erat pada kulit mudaku itu tak mau lepas.</p>
+
+        <p>"Chaeha, kemasi tasmu dan keluarlah."</p>
+
+        <p>Akhirnya, mata muram guru itu menemukanku. Dalam diam, aku mengemasi tasku, pikiranku berlari kencang dengan segala macam dugaan.</p>
+
+        <p>Apakah Ayah terkena serangan jantung? Apakah dia tertabrak mobil? Apakah dia terkena kanker seperti Ibu? Mungkinkah dia... meninggal?</p>
+
+        <p>Tolong, biarkan dia tetap hidup.</p>
+
+        <p>Aku berjalan keluar dengan tatapan berat teman-teman sekelasku di punggungku. Wajah bibiku, saat aku mendekatinya, terasa dingin, dan ujung jariku bahkan lebih dingin lagi. Kehangatan darah yang mengalir di nadiku mendingin dengan cepat, layaknya malam di gurun.</p>
+
+        <p>Pikiran dan firasat buruk mengancam untuk menghancurkanku, tetapi aku memaksakan diri untuk tampak tenang sampai kami mencapai tujuan di dalam mobil bibiku. Ia tidak mengucapkan sepatah kata pun kepadaku.</p>
+
+        <p><i>'Ke mana saja asal jangan rumah sakit. Ke mana saja asal jangan...'</i></p>
+
+        <p>Aku terlalu takut untuk bertanya, takut kalau jawabannya adalah Ayah sudah meninggal. Aku hanya menatap lurus ke depan, memasang sabuk pengaman dalam diam, sampai mobil tiba di kantor polisi.</p>
+
+        <p>Harapanku bahwa kami tidak pergi ke rumah sakit memang terkabul, tetapi rasa bingung itu masih tersisa. Aku digiring ke sebuah ruangan kecil di dalam kantor polisi dan duduk di hadapan seorang detektif bertubuh besar.</p>
+
+        <p>"Lee Chaeha, kau putra Lee Gilyeong, kan? Siswa kelas enam SD Danhyeon?"</p>
+
+        <p>"Ya, benar. Apakah terjadi sesuatu... pada Ayah?"</p>
+
+        <p>Aku berhasil mengajukan pertanyaan itu di tengah ketakutan yang meremas hatiku, tetapi detektif itu tidak menjawab. Ia hanya memberondongku dengan pertanyaan: Jam berapa Ayah pulang kemarin? Apa yang dia katakan? Apakah ada sesuatu yang tampak ganjil?"</p>
+
+        <p>Dia mengambil ponselku dan memeriksa semua pesan yang kami kirimkan. Aku tidak tahu banyak, tetapi butuh waktu lama sebelum dia membiarkanku pergi.</p>
+
+        <p>Aku merasakan bahwa sesuatu yang serius telah terjadi pada Ayah. Sesuatu yang sangat besar. Dia pasti mengalami kecelakaan dan meninggal.</p>
+
+        <p>Air mata panas menggenang di mataku, dipenuhi oleh keyakinan itu. Saat kami berkendara menuju rumah pamanku, aku akhirnya bertanya pada bibiku apa yang terjadi, tetapi jawaban dinginlah yang kudapat.</p>
+
+        <p>"Bibi tidak sanggup mengatakannya."</P>
+
+        <p>"Ayah... tidak meninggal, kan?"</p>
+
+        <p>Aku berhasil memaksakan kata-kata itu keluar, mengerahkan seluruh sisa keberanianku. Kematian bukanlah konsep abstrak bagiku setelah kepergian Ibu.</p>
+
+        <p>"Bukan seperti itu, jadi jangan khawatir. Ayahmu baik-baik saja. Terlalu baik, malah, itulah masalahnya."</p>
+
+        <p>Aku tidak mengerti apa yang telah terjadi, tetapi jawaban Bibi adalah kelegaan yang luar biasa. Sesuatu yang aneh memang telah terjadi, tetapi jika Ayah tidak meninggal, aku yakin kami bisa mengatasi apa pun bersama-sama.</p>
+
+        <p>Skenario terburuk yang bisa kubayangkan adalah Ayah meninggalkanku seperti Ibu, pergi ke langit abadi. Layaknya awan yang tak tergapai, layaknya sebuah bintang.</p>
+
+        <p>Diriku yang berusia tiga belas tahun tidak tahu bahwa ada banyak cara lain bagi seseorang untuk meninggalkan anaknya.</p>
+
+        <p>Sesampainya di apartemen pamanku pada sore hari, aku melihat wajah paman yang kesal, dan rasa dingin yang mencengkeram tubuhku sepanjang hari mulai berganti menjadi hawa panas yang membakar. Kini setelah ketakutan terburuk akan kematian Ayah mereda, aku mulai merasa terintimidasi oleh tatapan-tatapan di sekitarku.</p>
+
+        <p>Tangan pamanku mengarahkan remot kontrol ke arahku.</p>
+
+        <p>"Lee Chaeha. Kemarilah, tonton berita ini."</p>
+
+        <p>Aku akhirnya melepas ranselku, yang terasa seperti cangkang kura-kura di punggungku sepanjang hari, dan duduk di tepi sofa luas tempat pamanku duduk. Di TV, seorang pria dengan jaket yang ditarik menutupi kepalanya sedang duduk di meja logam, dikelilingi oleh polisi dan reporter.</p>
+
+        <p>Di balik jaket hijau yang dipakaikan detektif kepadanya, aku melihat sekilas kancing emas murah yang mengilap. Mirip dengan kancing di setelan jas Ayah yang tadi pagi kukritik karena norak.</p>
+
+        <p>Suara reporter memenuhi ruangan.</p>
+
+        <p>"Pada pukul 7 pagi tanggal 12, jasad Kang Wooseong, presiden direktur Casino World di Kota Danhyeon, ditemukan di kamar tidurnya oleh putra sulungnya, seorang siswa kelas tiga SMA. Polisi menduga Tuan Kang dibunuh oleh sopirnya, Tuan Lee, yang kini telah ditahan. Tuan Lee dilaporkan memiliki utang sekitar tiga puluh juta won dan tampaknya melakukan pembunuhan secara impulsif saat mencoba memeras uang tunai dalam jumlah besar dari Tuan Kang dengan mengancamnya menggunakan alat penusuk. Namun, jumlah uang yang dicuri Tuan Lee setelah membunuh Tuan Kang hanya sembilan ratus lima puluh ribu won."</p>
+
+        <p>Sembilan ratus lima puluh ribu won... Itu adalah bonus satu juta won yang sering diberikan Tuan Kang saat Ayah bekerja lembur, dikurangi lima puluh ribu won yang ia berikan padaku tadi malam. Ayah bilang ia menerima bonus itu kemarin.</p>
+
+        <p>"Tuan Lee menikam korban berkali-kali di bagian leher dengan alat penusuk, dan polisi telah mengamankan kesaksian bahwa Tuan Lee juga pernah terlibat dalam insiden kekerasan saat bekerja di perusahaan taksi. Menurut seorang rekan kerja..."</p>
+
+        <p>Perutku terasa dingin. Darah yang tadinya menghangatkan tubuhku terkuras habis dalam sekejap, seolah melalui lubang raksasa di telapak kakiku, seolah tak pernah ada di sana sebelumnya.</p>
+
+        <p>Pamanku berdecak.</p>
+
+        <p>"Sejujurnya, ini sangat memalukan... Karena tidak ada kerabat lain dari pihak ayahmu yang bisa menampungmu, kau harus tinggal di tempat kami. Jaga sikapmu. Jadilah pendiam dan jangan menarik perhatian. Kau tahu bagaimana tabiatku, bukan?"</p>
+
+        <p>"..."</p>
+
+        <p>"Bajingan ini... Aku hanya menahan ini karena kau adalah putra Eunyung."</p>
+
+        <p>Suara pamanku mendengung seperti tawon raksasa, tetapi aku hanya menatap kosong ke arah layar TV. Aku tidak mampu merespons atau menggerakkan tubuhku, bahkan saat omelan dan ratapannya terus berlanjut. Citra Ayah sebagai seorang kriminal, yang sangat jauh berbeda dari sosok yang kukenal, dan jauh berbeda dari Ibu, mengalir di benakku.</p>
+
+        <p>Sejujurnya, jiwaku telah meninggalkan pijakan yang kokoh dan mulai tenggelam tanpa henti ke kedalaman yang gelap. Turun ke dalam samudra yang dalam dan dingin, kehilangan seluruh kehangatannya.</p>
+
+        <p>Tak mampu menggerakkan anggota tubuhku, aku hanya tenggelam semakin dalam, menatap ke atas dengan mata yang redup ke arah permukaan air yang telah kutinggalkan. Permukaannya berkilau, mengingatkanku pada kilatan kancing emas yang memantulkan lampu kamera wartawan di kantor polisi. Kehangatan Ibu, saat terakhir kali dia menggenggam tanganku di rumah sakit, kini berubah menjadi sinar matahari yang beriak di permukaan air yang tak terjangkau.</p>
+
+        <p>'Pria itu bukan Ayah. Kancing emas itu memang sama dengan yang ada di setelan jas Ayah, tapi... orang lain mungkin membeli setelan yang sama. Jadi, itu tidak mungkin Ayah... Pasti ada kesalahan...' Aku mengulangi pikiran itu terus-menerus sampai sinar matahari di atas sana menghilang dan aku tak bisa lagi bernapas.</p>
+
+        <p>Namun jauh di lubuk hati, kesadaranku sudah tahu bahwa kancing emas itu tidak penting. Bahkan sebelum aku menyadari kancing-kancing itu, aku telah mengenali profil wajah Ayah, profil yang telah kulihat tak terhitung kalinya sejak awal hidupku, meskipun dia mengenakan jaket milik orang lain.</p>
+
+        <p>Saat aku tenggelam tanpa henti ke dalam kedalaman yang gelap, aku memiliki firasat samar. Apa yang akan terjadi nanti akan berbeda dari keputusasaan mana pun yang pernah kukenal sebelumnya, dan Ayah, seperti Ibu, telah meninggalkan planet yang sepi ini selamanya.</p>
+
+        <p>Penurunan ini tidak akan membiarkan kakiku menyentuh daratan lagi.</p>
     </div>
 
     <!-- 4. JAVASCRIPT: LOGIKA UNTUK MENGHIDUPKAN TOMBOL -->
@@ -124,5 +464,28 @@
         }
     </script>
 
+<!-- Navigasi Chapter -->
+<div class="nav-chapter">
+    <!-- Tombol Sebelumnya -->
+    <a href="#" class="btn-nav btn-disabled">« Sebelumnya</a>
+
+    <!-- Tombol ke Daftar Isi -->
+    <a href="index.html" class="btn-nav">Daftar Isi</a>
+
+    <!-- Tombol Selanjutnya -->
+    <a href="#" class="btn-nav btn-disabled">Selanjutnya »</a>
+</div>
+
+<!-- Bagian Dukungan -->
+<div class="dukungan">
+    <h3>Dukung Ghost Fujodanshi ✨</h3>
+    <p>Jika kamu menikmati terjemahanku, pertimbangkan untuk memberi dukungan agar aku tetap semangat!</p>
+    
+    <div class="tombol-donasi">
+        <!-- Ganti tanda # dengan link asli Trakteer/Ko-fi kamu -->
+        <a href="https://trakteer.id/ghostfujodanshi" target="_blank" class="btn-trakteer">Traktir di Trakteer</a>
+        <a href="https://ko-fi.com/ghostfujodanshi" target="_blank" class="btn-kofi">Support di Ko-fi</a>
+    </div>
+</div>
 </body>
 </html>

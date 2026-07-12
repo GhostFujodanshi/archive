@@ -48,3 +48,34 @@ p {
 .tombol-baca:hover {
     background-color: #8e44ad; 
 }
+
+/* Container Navigasi */
+.nav-chapter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px;
+}
+
+/* Gaya Tombol */
+.btn-nav {
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Efek saat tombol tidak aktif (misal Chapter 1 tidak punya Prev) */
+.btn-disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-nav:hover { background-color: #4a1c40; }
