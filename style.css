@@ -79,3 +79,25 @@ p {
 }
 
 .btn-nav:hover { background-color: #4a1c40; }
+
+.font-switcher {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background: #f9f2fc;
+    border-radius: 8px;
+}
+
+.font-switcher button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.font-switcher button:hover {
+    background: #4a1c40;
+}

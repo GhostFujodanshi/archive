@@ -159,6 +159,37 @@
 }
 
 .btn-nav:hover { background-color: #4a1c40; }
+
+.font-switcher {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.font-switcher button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.font-switcher button:hover {
+    background: #4a1c40;
+}
+
+:root {
+    --main-font-size: 16px; /* Nilai awal */
+}
+
+/* Wajib ada bagian ini agar body dan p "mendengar" variabelnya */
+body, p {
+    font-size: var(--main-font-size) !important;
+}
     </style>
 </head>
 <body>
@@ -170,7 +201,17 @@
 
         <!-- Tombol Panah Kembali -->
         <a href="index.html" class="tombol-kembali">← Kembali ke Beranda</a>
-        
+
+<div class="font-switcher">
+    <span>Pilih Font:</span>
+    <button onclick="changeFont('serif')">Serif</button>
+    <button onclick="changeFont('sans-serif')">Sans</button>
+    <button onclick="changeFont('monospace')">Mono</button>
+    <!-- Tombol Ukuran -->
+    <button onclick="changeFontSize(-2)">A-</button>
+    <button onclick="changeFontSize(2)">A+</button>
+</div>        
+
 <!-- Navigasi Chapter -->
 <div class="nav-chapter">
     <!-- Tombol Sebelumnya -->
@@ -487,5 +528,20 @@
         <a href="https://ko-fi.com/ghostfujodanshi" target="_blank" class="btn-kofi">Support di Ko-fi</a>
     </div>
 </div>
+
+<script>
+    function changeFont(fontType) {
+        // Mengubah font seluruh halaman
+        document.body.style.fontFamily = fontType;
+    }
+    let currentFontSize = 16; // Ukuran font default dalam piksel
+    
+    function changeFontSize(amount) {
+        currentFontSize += amount;
+        if (currentFontSize < 12) currentFontSize = 12; // Batas minimum
+        if (currentFontSize > 32) currentFontSize = 32; // Batas maksimum
+        document.documentElement.style.setProperty('--main-font-size', currentFontSize + "px");
+    }
+</script>
 </body>
 </html>
