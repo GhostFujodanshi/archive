@@ -18,6 +18,8 @@ body{
 
     overflow-x:hidden;
 
+    transition:background-color .3s ease, color .3s ease;
+
 }
 
 
@@ -85,5 +87,19 @@ button{
 section{
 
     padding-block:var(--space-12);
+
+}
+
+
+
+/* ==========================================
+   HIDDEN
+   Pastikan atribut hidden="" selalu bekerja,
+   walau ada class lain yang set display:flex/grid dsb.
+========================================== */
+
+[hidden]{
+
+    display:none !important;
 
 }

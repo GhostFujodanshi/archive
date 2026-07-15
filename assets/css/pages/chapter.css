@@ -1,6 +1,7 @@
 .reader {
     max-width: 720px;
     padding-block: var(--space-10);
+    padding-bottom: 40px;
 }
 
 .chapter-back {
@@ -11,7 +12,27 @@
 }
 
 .chapter-header h1 {
+    margin-bottom: var(--space-4);
+}
+
+.chapter-select-wrapper {
     margin-bottom: var(--space-6);
+}
+
+.chapter-select-wrapper select {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+    font-size: var(--fs-sm);
+}
+
+.chapter-content {
+    font-family: var(--reader-font-family, var(--font-family));
+    font-size: var(--reader-font-size, 1rem);
 }
 
 .chapter-content p {
@@ -23,4 +44,176 @@
     display: flex;
     justify-content: space-between;
     margin-top: var(--space-8);
+}
+
+/* Widget auto-scroll: pojok kanan bawah, ringkas, cuma "melebar"
+   nampilin kontrol kecepatan saat sedang aktif */
+.reading-toolbar {
+    position: fixed;
+    right: var(--space-4);
+    bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-2);
+    z-index: 900;
+}
+
+.autoscroll-switch {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-3) var(--space-2) var(--space-4);
+}
+
+.autoscroll-switch__label {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* switch ON/OFF */
+.switch {
+    border: none;
+    background: var(--color-border);
+    width: 44px;
+    height: 26px;
+    border-radius: var(--radius-full);
+    position: relative;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.switch.is-on {
+    background: var(--color-primary);
+}
+
+.switch.is-on::before {
+    left: 21px;
+}
+
+/* kontrol kecepatan, cuma muncul saat auto-scroll aktif */
+.speed-control {
+    display: flex;
+    gap: 6px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    border-radius: var(--radius-full);
+    padding: 6px;
+}
+
+.speed-control button {
+    border: none;
+    background: transparent;
+    color: var(--color-text-light);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    transition: var(--transition);
+}
+
+.speed-control button.is-active {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* Tombol "Aa" untuk buka panel pengaturan font */
+.text-settings-btn {
+    border: none;
+    background: var(--color-surface);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.text-settings-btn:hover,
+.text-settings-btn.is-active {
+    background: var(--color-primary-light);
+}
+
+.text-settings-panel {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    width: 250px;
+}
+
+.text-settings-panel__group {
+    margin-bottom: var(--space-4);
+}
+
+.text-settings-panel__group:last-child {
+    margin-bottom: 0;
+}
+
+.text-settings-panel__label {
+    display: block;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-2);
+}
+
+.font-family-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.font-family-options button {
+    border: 1px solid var(--color-border);
+    background: var(--color-bg);
+    color: var(--color-text);
+    padding: 8px 4px;
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    transition: var(--transition);
+}
+
+.font-family-options button.is-active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.font-family-options button:last-child:nth-child(odd) {
+    grid-column: span 2;
+}
+
+.font-size-control,
+#font-size-slider {
+    width: 100%;
+}
+
+#font-size-slider {
+    accent-color: var(--color-primary);
+    height: 6px;
+    cursor: pointer;
 }

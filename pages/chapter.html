@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="../assets/js/theme-init.js"></script>
+
 <title id="page-title">Baca Chapter - Ghost Fujodanshi Scanlation</title>
 <meta name="description" content="Baca chapter novel BL terjemahan bahasa Indonesia di Ghost Fujodanshi Scanlation.">
 <meta name="robots" content="noindex">
@@ -16,6 +18,13 @@
 <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
 
 <link rel="stylesheet" href="../assets/css/style.css">
+
+<!-- Font untuk pengaturan baca (Aa) — dimuat khusus di halaman ini saja,
+     supaya pilihan font beneran terlihat beda di semua HP (termasuk Android,
+     yang gak punya font seperti Georgia/Times New Roman secara bawaan) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@400;700&family=Lora:wght@400;700&family=Nunito:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,9 +33,12 @@
 
 <main class="container reader">
     <div class="chapter-header" id="chapter-header"></div>
+    <div class="chapter-select-wrapper" id="chapter-select-wrapper"></div>
     <article class="chapter-content" id="chapter-content"></article>
     <div class="chapter-nav" id="chapter-nav"></div>
 </main>
+
+<div class="reading-toolbar" id="reading-toolbar"></div>
 
 <div id="footer"></div>
 

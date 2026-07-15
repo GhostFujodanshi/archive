@@ -57,17 +57,17 @@ function renderNovelDetail(novel) {
     `);
 }
 
-function renderChapterList(slug, chapters) {
-    if (!chapters || chapters.length === 0) {
+function renderChapterList(slug, chapterTitles) {
+    if (!chapterTitles || chapterTitles.length === 0) {
         render("chapter-list", `<h2>Daftar Chapter</h2><p>Belum ada chapter.</p>`);
         return;
     }
 
-    const items = chapters
+    const items = chapterTitles
         .map(
-            (ch) => `
-        <a class="chapter-item" href="chapter.html?slug=${slug}&chapter=${ch.number}">
-            Chapter ${ch.number}: ${ch.title}
+            (title, index) => `
+        <a class="chapter-item" href="chapter.html?slug=${slug}&chapter=${index + 1}">
+            Chapter ${index + 1}: ${title}
         </a>`
         )
         .join("");
@@ -86,12 +86,12 @@ async function init() {
 
     const slug = getSlugFromURL();
     const novels = await getJSON("../data/novels.json");
-    const chaptersData = await getJSON("../data/chapters.json");
+    const chapterTitles = await getJSON(`../data/chapters/${slug}/index.json`);
 
     const novel = novels.find((n) => n.slug === slug);
 
     renderNovelDetail(novel);
-    renderChapterList(slug, chaptersData[slug]);
+    renderChapterList(slug, chapterTitles);
 }
 
 init();
