@@ -1,242 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+
 <head>
-    <title>Ghost Fujodanshi Web</title>
-    <style>
-        /* Gaya untuk Menu Navigasi */
-.navbar {
-    background-color: #ffffff;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 2px solid #f3e6f9;
-    margin-bottom: 20px;
-}
 
-.navbar a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #9b59b6;
-    font-weight: bold;
-    font-size: 18px;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.navbar a:hover {
-    color: #4a1c40;
-    text-decoration: underline;
-}
+<title>Ghost Fujodanshi Scanlation - Baca Novel BL Terjemahan Indonesia</title>
+<meta name="description" content="Baca novel BL (Boys Love) terjemahan bahasa Indonesia gratis di Ghost Fujodanshi Scanlation. Update terbaru, genre lengkap, nyaman dibaca.">
+<link rel="canonical" href="https://ghostfujodanshi.github.io/archive/">
 
-        /* INI ADALAH BAGIAN CSS KITA */
-        body {
-            background-color: #f3e6f9;
-            color: #4a1c40;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 50px;
-            text-align: center;
-        }
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 
-        h1 {
-            color: #9b59b6;
-        }
+<!-- Open Graph (preview saat link dishare) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ghost Fujodanshi Scanlation">
+<meta property="og:title" content="Ghost Fujodanshi Scanlation - Baca Novel BL Terjemahan Indonesia">
+<meta property="og:description" content="Baca novel BL (Boys Love) terjemahan bahasa Indonesia gratis. Update terbaru, genre lengkap, nyaman dibaca.">
+<meta property="og:image" content="https://ghostfujodanshi.github.io/archive/assets/images/og-image.jpg">
+<meta property="og:url" content="https://ghostfujodanshi.github.io/archive/">
 
-        p {
-            font-size: 18px;
-        }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ghost Fujodanshi Scanlation - Baca Novel BL Terjemahan Indonesia">
+<meta name="twitter:description" content="Baca novel BL (Boys Love) terjemahan bahasa Indonesia gratis. Update terbaru, genre lengkap, nyaman dibaca.">
+<meta name="twitter:image" content="https://ghostfujodanshi.github.io/archive/assets/images/og-image.jpg">
 
-        .kotak-novel {
-            background-color: transparent;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 30px auto;
-            max-width: 450px;
-            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.2);
-        }
+<link rel="stylesheet" href="assets/css/style.css">
 
-        /* INI KODE BARU UNTUK MENGATUR GAMBAR KOVER */
-        .kover-novel {
-            width: 100%; /* Membuat gambar menyesuaikan lebar kotak */
-            max-width: 250px; /* Lebar maksimal gambar agar tidak terlalu raksasa */
-            border-radius: 8px; /* Sudut gambar sedikit membulat */
-            margin-bottom: 15px; /* Memberi jarak antara gambar dan judul */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .kotak-novel h2 {
-            color: #4a1c40;
-            margin-top: 0;
-        }
-
-        .tombol-baca {
-            display: inline-block;
-            background-color: #9b59b6;
-            color: white;
-            padding: 10px 25px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        .tombol-baca:hover {
-            background-color: #8e44ad;
-        }
-
-        /* Gaya khusus untuk teks sinopsis */
-.sinopsis {
-    color: #666;             /* Warna abu-abu agar tidak terlalu mencolok */
-    font-style: italic;      /* Tulisan miring agar terlihat seperti kutipan */
-    font-size: 14px;         /* Ukuran font sedikit lebih kecil dari judul */
-    margin: 10px 0;          /* Jarak atas dan bawah */
-    line-height: 1.4;        /* Jarak antar baris */
-}
-
-/* Gaya untuk tombol buka/tutup */
-.tombol-lipat {
-    color: #9b59b6;          /* Warna ungu khas web kamu */
-    font-weight: bold;       /* Tulisan ditebalkan */
-    cursor: pointer;         /* Mengubah kursor panah menjadi gambar tangan saat disentuh */
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f9f2fc; /* Memberi latar ungu sangat pudar seperti tombol */
-    border-radius: 8px;      /* Ujungnya membulat */
-    list-style-type: '👇 ';    /* Mengubah ikon panah bawaan menjadi emoji (opsional) */
-}
-
-/* Mengubah warna saat tombol disentuh mouse (hover) */
-.tombol-lipat:hover {
-    background-color: #e6cff2;
-    color: #4a1c40;
-}
-
-/* Mengubah ikon saat tombol dalam keadaan TERBUKA */
-details[open] summary {
-    list-style-type: '👆 '; 
-    margin-bottom: 15px;     /* Memberi jarak dengan teks di bawahnya saat terbuka */
-}
-
-/* Gaya untuk kotak dukungan */
-.dukungan {
-    background-color: transparent;
-    padding: 30px;
-    margin: 40px auto;
-    max-width: 500px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.tombol-donasi {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Jarak antar tombol */
-    margin-top: 20px;
-}
-
-/* Tombol Trakteer (Warna Merah Khas) */
-.btn-trakteer {
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-/* Tombol Ko-fi (Warna Biru Khas) */
-.btn-kofi {
-    background-color: #2980b9;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-/* Efek saat mouse diarahkan ke tombol */
-.btn-trakteer:hover, .btn-kofi:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
-}
-
-.font-switcher {
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-    background: transparent;
-    border-radius: 8px;
-}
-
-.font-switcher button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    background: #9b59b6;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
-
-.font-switcher button:hover {
-    background: #4a1c40;
-}
-    </style>
 </head>
-<body>
-    
-    <h1>Selamat Datang di Ghost Fujodanshi</h1>
-    <!-- ... sisanya tetap sama ... -->
-    <!-- INI ADALAH BAGIAN ISI WEBSITE -->
-    <h1>Selamat Datang di Ghost Fujodanshi Translation</h1>
-    <p>Halo! Ini adalah tempat aku, kamu, dan kita semua membaca.</p>
+
 
 <body>
-    <!-- Tambahkan Navigasi ini -->
-    <nav class="navbar">
-        <a href="index.html">Novel</a>
-        <a href="komik.html">Komik</a>
-    </nav>
 
-<div class="font-switcher">
-    <span>Pilih Font:</span>
-    <button onclick="changeFont('serif')">Serif</button>
-    <button onclick="changeFont('sans-serif')">Sans</button>
-    <button onclick="changeFont('monospace')">Mono</button>
-</div>
 
-    <div class="kotak-novel">
-        <!-- INI KODE BARU UNTUK MENAMPILKAN GAMBAR -->
-        <!-- Sementara aku pakai gambar contoh (placeholder) dari internet -->
-        <img src="cover tpop.png" alt="Kover Novel" class="kover-novel">
+<div id="header"></div>
 
-        <h2>The Prosecutors Offices Proposal</h2>
 
-    <!-- BAGIAN 2: DAFTAR BAB -->
-    <details>
-        <summary class="tombol-lipat">📖 Lihat Daftar BAB</summary>
-        <ul style="text-align: left; line-height: 1.8; margin-top: 10px;">
-            <li><a href="tpopbab1.html">BAB 1</a></li>
-        </ul>
-    </details>
+<main>
 
-    </div>
+    <div id="hero"></div>
 
-    <!-- Bagian Dukungan -->
-<div class="dukungan">
-    <h3>Dukung Ghost Fujodanshi ✨</h3>
-    <p>Jika kamu menikmati terjemahanku, pertimbangkan untuk memberi dukungan agar aku tetap semangat!</p>
-    
-    <div class="tombol-donasi">
-        <!-- Ganti tanda # dengan link asli Trakteer/Ko-fi kamu -->
-        <a href="https://trakteer.id/ghostfujodanshi" target="_blank" class="btn-trakteer">Traktir di Trakteer</a>
-        <a href="https://ko-fi.com/ghostfujodanshi" target="_blank" class="btn-kofi">Support di Ko-fi</a>
-    </div>
-</div>
+    <div id="latest"></div>
 
-<script>
-    function changeFont(fontType) {
-        // Mengubah font seluruh halaman
-        document.body.style.fontFamily = fontType;
-    }
-</script>
+    <div id="donation"></div>
+
+</main>
+
+
+<div id="footer"></div>
+
+
+
+<script type="module" src="assets/js/pages/home.js"></script>
+
 
 </body>
+
 </html>

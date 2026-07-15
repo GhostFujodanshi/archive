@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "Terjemahan Novel BL dalam Bahasa Indonesia.",
+    "subtitle": "Nikmati berbagai novel pilihan dengan terjemahan bahasa Indonesia yang nyaman dibaca."
+  },
+
+  "latest": [
+    {
+      "title": "Tawaran Kantor Jaksa",
+      "author": "Hye Bok",
+      "cover": "assets/images/cover-tpop.jpg",
+      "status": "Ongoing",
+      "url": "#"
+    }
+  ]
+}

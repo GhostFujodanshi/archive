@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "title": "Tawaran Kantor Jaksa",
+        "slug": "tawaran-kantor-jaksa",
+        "author": "Hye Bok",
+        "cover": "assets/images/cover-tpop.jpg",
+        "genres": ["Adult", "Drama", "Mystery", "Romance", "Yaoi"],
+        "status": "Ongoing",
+        "chapters": 24,
+        "synopsis": "Seorang jaksa muda yang ambisius dihadapkan pada tawaran kerja sama yang tidak biasa dari seorang pengacara misterius. Di balik kasus yang mereka tangani bersama, benih hubungan terlarang mulai tumbuh."
+    },
+    {
+        "id": 2,
+        "title": "Bayangan di Balik Kabut",
+        "slug": "bayangan-di-balik-kabut",
+        "author": "Min Jae",
+        "cover": "assets/images/cover-tpop.jpg",
+        "genres": ["Fantasy", "Supernatural", "Romance"],
+        "status": "Ongoing",
+        "chapters": 12,
+        "synopsis": "Di sebuah kota yang diselimuti kabut abadi, seorang pemburu roh bertemu dengan sosok misterius yang ternyata menyimpan rahasia besar tentang asal-usul kabut itu sendiri."
+    },
+    {
+        "id": 3,
+        "title": "Musim Semi yang Tertunda",
+        "slug": "musim-semi-yang-tertunda",
+        "author": "Do Yun",
+        "cover": "assets/images/cover-tpop.jpg",
+        "genres": ["School Life", "Slice of Life", "Romance"],
+        "status": "Completed",
+        "chapters": 40,
+        "synopsis": "Kisah cinta masa SMA yang tertunda selama bertahun-tahun, hingga takdir mempertemukan mereka kembali di reuni sekolah dengan perasaan yang ternyata belum pernah benar-benar hilang."
+    }
+]

@@ -1,0 +1,23 @@
+.donation__box {
+    background: var(--color-primary-light);
+    border-radius: var(--radius-xl);
+    padding: var(--space-10) var(--space-6);
+    text-align: center;
+}
+
+.donation__box h2 {
+    margin-bottom: var(--space-3);
+}
+
+.donation__box p {
+    max-width: 500px;
+    margin-inline: auto;
+    margin-bottom: var(--space-6);
+}
+
+.donation__buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}

@@ -1,0 +1,24 @@
+{
+    "siteName": "Ghost Fujodanshi Scanlation",
+
+    "tagline": "Tempat membaca novel favoritmu.",
+
+    "logo": "assets/images/logo.png",
+
+    "donation": {
+        "enabled": true,
+
+        "title": "Dukung Kami",
+
+        "description": "Donasi digunakan untuk membantu biaya domain, server, dan proses penerjemahan.",
+
+        "Trakteer": "https://trakteer.id/ghostfujodanshi",
+
+        "Ko-fi": "https://ko-fi.com/ghostfujodanshi"
+    },
+
+    "social": {
+        "telegram": "https://t.me/mooncapture",
+        "email": "ghostfujodanshi@gmail.com"
+    }
+}

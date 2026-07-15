@@ -1,0 +1,33 @@
+{
+    "tawaran-kantor-jaksa": [
+        {
+            "number": 1,
+            "title": "Pertemuan Pertama",
+            "content": "Ini adalah teks contoh (placeholder) untuk Chapter 1. Ganti bagian ini dengan hasil terjemahan asli kamu.\n\nKamu bisa menulis beberapa paragraf di sini, pisahkan tiap paragraf dengan baris kosong seperti contoh ini."
+        },
+        {
+            "number": 2,
+            "title": "Kasus Pertama",
+            "content": "Ini adalah teks contoh untuk Chapter 2.\n\nSilakan ganti dengan konten terjemahan yang sebenarnya."
+        },
+        {
+            "number": 3,
+            "title": "Rahasia yang Tersembunyi",
+            "content": "Ini adalah teks contoh untuk Chapter 3.\n\nSilakan ganti dengan konten terjemahan yang sebenarnya."
+        }
+    ],
+    "bayangan-di-balik-kabut": [
+        {
+            "number": 1,
+            "title": "Kabut Pertama",
+            "content": "Ini adalah teks contoh untuk Chapter 1 dari novel ini.\n\nGanti dengan konten asli."
+        }
+    ],
+    "musim-semi-yang-tertunda": [
+        {
+            "number": 1,
+            "title": "Reuni",
+            "content": "Ini adalah teks contoh untuk Chapter 1 dari novel ini.\n\nGanti dengan konten asli."
+        }
+    ]
+}

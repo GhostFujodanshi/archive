@@ -1,0 +1,26 @@
+.reader {
+    max-width: 720px;
+    padding-block: var(--space-10);
+}
+
+.chapter-back {
+    display: inline-block;
+    margin-bottom: var(--space-4);
+    color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+.chapter-header h1 {
+    margin-bottom: var(--space-6);
+}
+
+.chapter-content p {
+    margin-bottom: var(--space-4);
+    line-height: 1.9;
+}
+
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-8);
+}
